@@ -1,21 +1,26 @@
 import type { CSSProperties } from "react"
 
-const myStyles:CSSProperties = {
-    display:'flex',
+interface ItemCounterProps {
+    name: string;
+    quantity?: number;
+}
+
+const myStyles: CSSProperties = {
+    display: 'flex',
     alignItems: 'center',
     gap: 10,
     marginTop: 10,
 }
 
-export const ItemCounter = () => {
-  return (
-    <section style={myStyles}>
-        <span style={{
-            width: 150,
-        }}>Nintendo Switch 2</span>
-        <button>+1</button>
-        <span>10</span>
-        <button>-1</button>
-    </section>
-  )
+export const ItemCounter = ({name,quantity}:ItemCounterProps) => {
+    return (
+        <section style={myStyles}>
+            <span style={{
+                width: 150,
+            }}>{name}</span>
+            <button>+1</button>
+            <span>{quantity}</span>
+            <button>-1</button>
+        </section>
+    )
 }

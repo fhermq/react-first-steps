@@ -13,9 +13,10 @@ export function FirstStepsApp() {
         // </>
         <>
             <h1>Carrito de compras</h1>
-            <ItemCounter />
-            <ItemCounter />
-            <ItemCounter />
+            <ItemCounter name="Nintendo Switch 2" quantity={1}/>
+            <ItemCounter name="Pro Controller" quantity={2} />
+            <ItemCounter name="Super Smash Bros" quantity={1} />
+            <ItemCounter name="Memoria SD 256 GB" quantity={2} />
         </>
     );
 }
