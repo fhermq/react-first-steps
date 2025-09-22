@@ -1,13 +1,21 @@
- const firstName = 'Fernando :)';
-    const lastName = 'Mirasol';
+import type { CSSProperties } from "react";
 
-    const favoriteGames = ['uno', 'dos', 'tres'];
-    const isActive = false; //No genera nada en react
+const firstName = 'Fernando :)';
+const lastName = 'Mirasol';
 
-    const address = {
-        zipCode: '03340',
-        country: 'México'
-    }
+const favoriteGames = ['uno', 'dos', 'tres'];
+const isActive = true; //No genera nada en react
+
+const address = {
+    zipCode: '03340',
+    country: 'México'
+}
+
+const myStyles: CSSProperties = {
+    backgroundColor: isActive ? 'blue' : 'red',
+    borderRadius: 10,
+    padding: 10,
+}
 
 //Utilizar funcion de flecha.
 export const MyAwesomeApp = () => {
@@ -16,8 +24,8 @@ export const MyAwesomeApp = () => {
             <h1>{firstName}</h1>
             <h3>{lastName}</h3>
             <p>{favoriteGames.join(', ')}</p>
-            <h1>{isActive? 'Activo' :'No activo'}</h1>
-            <p>{JSON.stringify(address)}</p>
+            <h1>{isActive ? 'Activo' : 'No activo'}</h1>
+            <p style={myStyles}>{JSON.stringify(address)}</p>
         </>
     )
 }
