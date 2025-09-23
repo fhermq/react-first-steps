@@ -21,15 +21,23 @@ describe('MyAwesomeApp', () => {
 
  
     });
-    test('Should render firstName and Lastname - using screen', () => {
-        // Container ayuda a evaluar el estado inicial.
-        //Screen de debe usar si o si cuando se usen eventos
-        render(<MyAwesomeApp />);
-        screen.debug();
+    //snapshots recomendado si el componente no se va a modificar 
 
-        const h1 = screen.getByTestId('first-name-title');
-        expect(h1.innerHTML).toContain('Fernando');
-        console.log(h1.innerHTML);
+    // test('Should render firstName and Lastname - using screen', () => {
+    //     // Container ayuda a evaluar el estado inicial.
+    //     //Screen de debe usar si o si cuando se usen eventos
+    //     render(<MyAwesomeApp />);
+    //     screen.debug();
 
-    });
+    //     const h1 = screen.getByTestId('first-name-title');
+    //     expect(h1.innerHTML).toContain('Fernando');
+    //     console.log(h1.innerHTML);
+
+    // });
+
+
+    // test('Should match snapshot - with screen ', ()=>{
+    //     render(<MyAwesomeApp/>);
+    //     expect( screen.getByTestId('first-div')).toMatchSnapshot();
+    // })
 });
