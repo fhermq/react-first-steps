@@ -1,4 +1,6 @@
 import { useState, type CSSProperties } from "react"
+// import './ItemCounter.css';
+import styles from './ItemCounter.module.css';
 
 interface ItemCounterProps {
     name: string;
@@ -6,10 +8,10 @@ interface ItemCounterProps {
 }
 
 const myStyles: CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 10,
-    marginTop: 10,
+    // display: 'flex',
+    // alignItems: 'center',
+    // gap: 10,
+    // marginTop: 10,
 }
 
 export const ItemCounter = ({ name, quantity = 1 }: ItemCounterProps) => {
@@ -40,10 +42,10 @@ export const ItemCounter = ({ name, quantity = 1 }: ItemCounterProps) => {
     }
 
     return (
-        <section style={myStyles}>
-            <span style={{
-                width: 150,
-            }}>{name}</span>
+        <section className={styles.itemRow } >
+            <span className={styles['item-text']} style={{
+                color: count === 0 ? 'red' : 'black',
+            }} >{name}</span>
             <button onClick={handleAdd}>+1</button>
             <span>{count}</span>
             <button onClick={handleSustract} >-1</button>
