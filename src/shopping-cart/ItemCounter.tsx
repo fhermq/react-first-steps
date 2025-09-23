@@ -1,4 +1,5 @@
-import { useState, type CSSProperties } from "react"
+// import { useState, type CSSProperties } from "react"
+import { useState } from "react"
 // import './ItemCounter.css';
 import styles from './ItemCounter.module.css';
 
@@ -7,12 +8,12 @@ interface ItemCounterProps {
     quantity?: number;
 }
 
-const myStyles: CSSProperties = {
+// const myStyles: CSSProperties = {
     // display: 'flex',
     // alignItems: 'center',
     // gap: 10,
     // marginTop: 10,
-}
+// }
 
 export const ItemCounter = ({ name, quantity = 1 }: ItemCounterProps) => {
     //Los hooks van al inicio.
@@ -33,13 +34,13 @@ export const ItemCounter = ({ name, quantity = 1 }: ItemCounterProps) => {
     }
 
 
-    const handleClick = () => {
-        console.log(`Click en ${name}`);
-    }
+    // const handleClick = () => {
+    //     console.log(`Click en ${name}`);
+    // }
 
-    const handleOnMouseEnter = () => {
-        console.log(`On mouse Enter en ${name}`)
-    }
+    // const handleOnMouseEnter = () => {
+    //     console.log(`On mouse Enter en ${name}`)
+    // }
 
     return (
         <section className={styles.itemRow } >
