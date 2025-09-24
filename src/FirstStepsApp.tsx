@@ -6,7 +6,7 @@ interface ItemInCart {
 }
 const itemsInCart: ItemInCart[] = [
     { productName: 'Nintendo Switch 2', quantity: 1 },
-    { productName: 'Pro Controller', quantity: 2 },
+    { productName: 'Pro Controller', quantity: 5 },
     { productName: 'Super Smash Bros', quantity: 1 },
     { productName: 'Memoria SD 256 GB', quantity: 3 },
 ]
