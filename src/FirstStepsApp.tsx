@@ -23,7 +23,7 @@ export function FirstStepsApp() {
         //     </div>
         // </>
         <>
-            <h1>Carrito de compras</h1>
+            <h1 data-testid="test-h1">Carrito de compras</h1>
             {/* <ItemCounter name="Nintendo Switch 2" quantity={1}/>
             <ItemCounter name="Pro Controller" quantity={2} />
             <ItemCounter name="Super Smash Bros" quantity={1} />

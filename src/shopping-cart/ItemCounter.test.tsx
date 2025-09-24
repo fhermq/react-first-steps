@@ -55,5 +55,26 @@ describe('ItemCounter', () => {
         // screen.debug();
     });
 
+    test('Should change color to red when count is 0', () => {
+        const name = 'Test item';
+        const qty = 0;
+        render(<ItemCounter name={name} quantity={qty} />)
+        const itemText = screen.getByText(name);
+        console.log(itemText.style.color);
+        expect(itemText.style.color).toBe('red');
+        // expect(screen.getByText('0')).toBeDefined();
+        // screen.debug();
+    });
+
+    test('Should change color to black when count is +1', () => {
+        const name = 'Test item';
+        const qty = 1;
+        render(<ItemCounter name={name} quantity={qty} />)
+        const itemText = screen.getByText(name);
+        console.log(itemText.style.color);
+        expect(itemText.style.color).toBe('black');
+
+    });
+
 
 })

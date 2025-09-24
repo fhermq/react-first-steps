@@ -9,10 +9,10 @@ interface ItemCounterProps {
 }
 
 // const myStyles: CSSProperties = {
-    // display: 'flex',
-    // alignItems: 'center',
-    // gap: 10,
-    // marginTop: 10,
+// display: 'flex',
+// alignItems: 'center',
+// gap: 10,
+// marginTop: 10,
 // }
 
 export const ItemCounter = ({ name, quantity = 1 }: ItemCounterProps) => {
@@ -43,7 +43,7 @@ export const ItemCounter = ({ name, quantity = 1 }: ItemCounterProps) => {
     // }
 
     return (
-        <section className={styles.itemRow } >
+        <section className={styles.itemRow} >
             <span className={styles['item-text']} style={{
                 color: count === 0 ? 'red' : 'black',
             }} >{name}</span>
